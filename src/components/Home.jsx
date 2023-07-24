@@ -53,20 +53,17 @@ const Home = () => {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.7 }}
-          className="text-center md:w-1/2"
+          className="text-center md:w-2/3"
         >
           <h1 className="text-primary text-5xl font-extrabold tracking-wider mb-8">
-            Hey, I'm
-          </h1>
-          <h1 className="text-primary text-5xl font-extrabold tracking-wider mb-8">
-            Mengchen Wang
+            Hey, I'm Mengchen Wang
           </h1>
           {textSequence.slice(0, currentIndex + 1).map((text, index) => (
             <React.Fragment key={index}>
               <TypeAnimation
                 sequence={text}
                 speed={50}
-                style={{ fontSize: "1.5em", display: "block", width: "60%" }}
+                style={{ fontSize: "1.5em", display: "block" }}
                 repeat={0}
                 className="font-semibold text-transparent leading-10 bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500"
               />

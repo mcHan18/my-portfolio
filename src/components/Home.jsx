@@ -66,7 +66,7 @@ const Home = () => {
               <TypeAnimation
                 sequence={text}
                 speed={50}
-                style={{ fontSize: "1.5em", display: "block" }}
+                style={{ fontSize: "1.5em", display: "block", width: "60%" }}
                 repeat={0}
                 className="font-semibold text-transparent leading-10 bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500"
               />

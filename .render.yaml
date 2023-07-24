@@ -1,0 +1,10 @@
+version: 1
+buildCommand:
+  # 构建命令，用于打包和构建项目
+  - npm install
+  - npm run build
+
+startCommand:
+  # 启动命令，用于在生产环境中运行项目
+  - npm install --production
+  - npm start

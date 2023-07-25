@@ -2,6 +2,7 @@
 import LinkedIn from "../assets/socials/linkedin.svg";
 import GitHub from "../assets/socials/github.svg";
 import Book from "../assets/curriculum-vitae.png";
+import Photo from "../assets/personal-photo.png";
 import { TypeAnimation } from "react-type-animation";
 import { useState, useEffect } from "react";
 
@@ -68,6 +69,20 @@ const Home = () => {
               <br />
             </React.Fragment>
           ))}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={Photo}
+              alt=""
+              className="w-13 h-13"
+              style={{ height: "300px" }}
+            />
+          </div>
         </motion.div>
       </div>
 

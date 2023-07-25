@@ -52,12 +52,8 @@ const About = () => {
                 </a>{" "}
                 where I post useful content related to previous works. Also, you
                 can download my{" "}
-                <a
-                  href="../../public/Mengchen_Resume.pdf"
-                  className="text-secondary font-bold underline"
-                >
-                  Resume
-                </a>{" "}
+                <span className="text-secondary font-bold">Resume</span> by
+                click the image.
               </p>
 
               <p className="mb-5">

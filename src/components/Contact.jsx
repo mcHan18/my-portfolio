@@ -64,7 +64,7 @@ const Contact = () => {
       />
 
       <div
-        className="md:w-100% mx-auto bg-white md:px-16 px-8 py-8 rounded mb-32"
+        className="flex-container md:w-100% mx-auto bg-white md:px-16 px-8 py-8 rounded mb-32"
         style={{
           display: "flex",
           justifyContent: "space-between",
@@ -73,9 +73,9 @@ const Contact = () => {
         }}
       >
         <div
-          className="w-1/2 h-400px p-4 rounded"
+          className="map-container w-1/2 h-400px p-4 rounded"
           style={{
-            width: "60%",
+            width: "90%",
             height: "350px",
             padding: "2",
             borderRadius: "20px",
@@ -98,7 +98,7 @@ const Contact = () => {
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="w-3/4 p-4 rounded mr-4"
+          className="form-container w-full p-2 rounded"
           id="formContainer"
           style={{ flex: 1 }}
         >

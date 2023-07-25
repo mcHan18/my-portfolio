@@ -101,6 +101,7 @@ const About = () => {
                 />
               </a>
             </div>
+
             <span>Click the image to download my resume.</span>
           </motion.div>
         </div>

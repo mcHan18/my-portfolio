@@ -12,7 +12,7 @@ const Headline = ({ title, subtitle }) => {
       initial="hidden"
       whileInView={"show"}
       viewport={{ once: true, amount: 0.3 }}
-      className="text-center mx-auto md:w-2/3 my-16"
+      className="text-center mx-auto md:w-2/3"
     >
       <h2 className="text-4xl font-bold tracking-wide mt-24 mb-5">{title}</h2>
       <div className="divider"></div>

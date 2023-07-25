@@ -65,14 +65,25 @@ const Contact = () => {
 
       <div
         className="md:w-100% mx-auto bg-white md:px-16 px-8 py-8 rounded mb-32"
-        style={{ display: "flex", justifyContent: "space-between" }}
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
       >
         <div
           className="w-1/2 h-400px p-4 rounded"
-          style={{ width: "50%", height: "650px", padding: "4" }}
+          style={{
+            width: "60%",
+            height: "350px",
+            padding: "2",
+            borderRadius: "20px",
+            zIndex: "0",
+          }}
           id="map"
         >
-          <MapContainer center={position} zoom={17} className="w-full h-full">
+          <MapContainer center={position} zoom={11} className="w-full h-full">
             <TileLayer
               attribution='&copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a> contributors'
               url="https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}"
@@ -87,7 +98,7 @@ const Contact = () => {
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="w-1/2 p-4 rounded mr-4"
+          className="w-3/4 p-4 rounded mr-4"
           id="formContainer"
           style={{ flex: 1 }}
         >
@@ -114,7 +125,7 @@ const Contact = () => {
             name="message"
             id="message"
             cols="80"
-            rows="10"
+            rows="8"
             placeholder="Leave Your Message"
             className="p-5 mb-8"
             required

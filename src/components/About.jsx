@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-
+import Resume from "../assets/resume.png";
 import Headline from "../shared/Headline";
 import skills from "../../skills.js";
 
@@ -90,6 +90,22 @@ const About = () => {
                 </p>
               ))}
             </div>
+            <h4 className="text-2xl font-bold mt-8">My Resume</h4>
+            <div className="flex flex-wrap gap-3 md:w-10/12">
+              <a
+                href="https://drive.google.com/file/d/1W0pEaL65s6OzR2lDdY_Wlixf0xI2b2jl/view?usp=drive_link"
+                className="p-3 hover:bg-slate-400 block rounded transition-all duration-500"
+                target="_blank"
+              >
+                <img
+                  src={Resume}
+                  alt=""
+                  className="w-13 h-13"
+                  style={{ height: "200px" }}
+                />
+              </a>
+            </div>
+            <span>Click the image to download my resume.</span>
           </motion.div>
         </div>
       </div>

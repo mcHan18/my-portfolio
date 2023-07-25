@@ -65,6 +65,17 @@
   border-radius: 5px;
   margin: 5rem auto 0 auto;
 }
+.map {
+  /* box-shadow: rgba(100,100,111,.2) 0 7px 29px 0; */
+  background: #fff;
+  padding: 4rem;
+  margin-top: 6rem;
+  /* max-width: 80rem; */
+  /* text-align: right; */
+  /* width: 95%; */
+  border-radius: 5px;
+  margin: 5rem auto 0 auto;
+}
 
 label {
   color: #666;

@@ -1,6 +1,9 @@
 import Headline from "../shared/Headline";
 import { useRef } from "react";
+// import { useState,  } from "react";
 import emailjs from "@emailjs/browser";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 // motion
 import { motion } from "framer-motion";
@@ -9,6 +12,9 @@ import { fadeIn } from "../variants";
 
 const Contact = () => {
   const form = useRef();
+  const position = [42.4258956, -71.0709695];
+  const accessToken =
+    "pk.eyJ1IjoibWNsb2xvZSIsImEiOiJjbGtocXVpZjYwN3kzM3Bta3gxbWJrNGI2In0.4fdLHukESssR8gKHe7iUFg";
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -43,12 +49,48 @@ const Contact = () => {
       <Headline
         title={"CONTACT"}
         subtitle={
-          "Feel free to Contact me by sending me email and I will get back to you as soon as possible!"
+          <div style={{ whiteSpace: "pre-line" }}>
+            Feel free to Contact me by{" "}
+            <a href="#formContainer">
+              <strong style={{ color: "#7843e9", fontWeight: "bold" }}>
+                sending me an email
+              </strong>
+            </a>
+            , and I will get back to you as soon as possible!
+            <br />
+            {"\n"}My address: 100-150 Exchange Street, Malden, MA, 02148
+          </div>
         }
       />
 
-      <div className="md:w-2/3 mx-auto bg-white md:px-16 px-8 py-8 rounded mb-32">
-        <form ref={form} onSubmit={sendEmail}>
+      <div
+        className="md:w-100% mx-auto bg-white md:px-16 px-8 py-8 rounded mb-32"
+        style={{ display: "flex", justifyContent: "space-between" }}
+      >
+        <div
+          className="w-1/2 h-400px p-4 rounded"
+          style={{ width: "50%", height: "650px", padding: "4" }}
+          id="map"
+        >
+          <MapContainer center={position} zoom={17} className="w-full h-full">
+            <TileLayer
+              attribution='&copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a> contributors'
+              url="https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}"
+              id="mapbox/streets-v11"
+              accessToken={accessToken}
+            />
+            <Marker position={position}>
+              <Popup>Mengchen here, come over for a cup of coffee :)</Popup>
+            </Marker>
+          </MapContainer>
+        </div>
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="w-1/2 p-4 rounded mr-4"
+          id="formContainer"
+          style={{ flex: 1 }}
+        >
           <label htmlFor="name">Name: </label>
           <input
             type="text"

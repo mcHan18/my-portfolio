@@ -108,7 +108,7 @@ const Home = () => {
         </div>
         <div className="my-1">
           <a
-            href="https://drive.google.com/file/d/1SsijRY0QRCTXTvkDsBxwZ8dobMjuLqhg/view?usp=sharing"
+            href="https://drive.google.com/file/d/19NqrtAVmZhcjuCYA2_y0WXvZp59RzqTs/view?usp=drive_link"
             className="p-3 hover:bg-slate-400 block rounded transition-all duration-500"
             target="_blank"
           >

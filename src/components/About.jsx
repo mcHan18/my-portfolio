@@ -22,7 +22,7 @@ const About = () => {
         <div className="flex flex-col md:flex-row items-start justify-start">
           {/* left side */}
           <motion.div
-            variants={fadeIn("right", 0.3)}
+            variants={fadeIn("right", 0.1)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
@@ -69,7 +69,7 @@ const About = () => {
 
           {/* right side */}
           <motion.div
-            variants={fadeIn("left", 0.5)}
+            variants={fadeIn("left", 0.2)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.5 }}

@@ -22,7 +22,7 @@ const Projects = () => {
         {projects.map((project) => (
           <div key={project.id}>
             <motion.div
-              variants={fadeIn("up", 0.3)}
+              variants={fadeIn("up", 0.2)}
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: true, amount: 0.2 }}

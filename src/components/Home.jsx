@@ -16,6 +16,7 @@ const Home = () => {
   const textSequence = [
     "Attending to CSA program at NEU in 2023 fall.",
     "Worked as a Data Scientist for 3 years at SF Technology in China.",
+    "Graduated from Columbia University in 2021, majoring in Statistics.",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
